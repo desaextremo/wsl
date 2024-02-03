@@ -1,0 +1,86 @@
+/* Reset de estilos para eliminar márgenes y paddings predeterminados del navegador */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #05090F;
+    color: #606263;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0560C0;
+    padding: 1rem;
+}
+
+.header__logo img {
+    width: 80px; /* Ajustar el tamaño según necesidades */
+}
+
+.header__nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.header__nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Secciones */
+.perfil,
+.experiencia,
+.proyectos,
+.tutoriales {
+    padding: 2rem;
+}
+
+/* Footer */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #606263;
+    color: #fff;
+}
+
+.footer__about,
+.footer__social,
+.footer__contact {
+    text-align: center;
+}
+
+.footer__link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos adicionales para hacer el diseño responsive */
+
+/* Por ejemplo, hacer que las secciones se ajusten en pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header__nav {
+        margin-top: 1rem;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
